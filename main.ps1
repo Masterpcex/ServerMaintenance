@@ -1,6 +1,6 @@
 $start_time = Get-Date
 
-# Single Instance (no overloads)
+# Ciao Instance (no overloads)
 function MUTEX-CHECK {
     $AppId = "16fcb8bb-e281-472d-a9f6-39f0f32f19f2" # This GUID string is changeable
     $CreatedNew = $false
